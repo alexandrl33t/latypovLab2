@@ -36,7 +36,6 @@ if n.isdigit() == False:
 else:
     start_time = datetime.now()
     n = int(n)
-    lenght_of_thread = int(len(combinations) / n)
     threads = [
         threading.Thread(target=brute_force, args=(hashes, combinations, i, n))
         for i in range(0, n)
